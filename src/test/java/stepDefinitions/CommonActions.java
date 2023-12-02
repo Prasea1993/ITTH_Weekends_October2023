@@ -32,14 +32,16 @@ public class CommonActions {
 
         driverManager =new DriverManager();
         driver=driverManager.initialiseBrowser(properties.getProperty("browser"));
-
+        driver.manage().window().maximize();
 
     }
 
 
     @After
     public void afterEveryScenario(){
-      driver.close();
+        if(driver!=null) {
+            driver.close();
+        }
 
     }
 
