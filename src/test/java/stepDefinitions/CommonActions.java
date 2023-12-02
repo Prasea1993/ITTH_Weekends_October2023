@@ -1,0 +1,48 @@
+package stepDefinitions;
+
+import drivers.DriverManager;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import org.openqa.selenium.WebDriver;
+import utils.ConfigReader;
+
+import java.io.IOException;
+import java.util.Properties;
+
+public class CommonActions {
+
+
+// open browser
+//close browser
+// in TestNG there are annotations called Before and After
+
+
+    private DriverManager driverManager;
+    private ConfigReader configReader;
+    private WebDriver driver;
+    private Properties properties;
+
+
+
+    @Before(order=1)
+    public void beforeEveryScenario() throws IOException {
+
+        configReader=new ConfigReader();
+        properties=configReader.getData();
+
+        driverManager =new DriverManager();
+        driver=driverManager.initialiseBrowser(properties.getProperty("browser"));
+
+
+    }
+
+
+    @After
+    public void afterEveryScenario(){
+      driver.close();
+
+    }
+
+
+
+}
