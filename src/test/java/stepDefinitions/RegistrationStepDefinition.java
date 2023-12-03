@@ -3,7 +3,10 @@ package stepDefinitions;
 import appPages.HomePage;
 import appPages.RegistrationPage;
 import drivers.DriverManager;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
+
+import java.util.List;
 
 public class RegistrationStepDefinition {
 
@@ -34,6 +37,17 @@ public class RegistrationStepDefinition {
     @Then("clicks on startOPD button")
     public void clicks_on_start_opd_button() throws InterruptedException {
         registrationPage.clickStartOPD();
+    }
+
+
+
+    @Then("user enters patient data as below")
+    public void user_enters_patient_data_as_below(DataTable dataTable) throws InterruptedException {
+
+        List<List<String>> testData=dataTable.asLists();
+
+        registrationPage.createPatientRegistration(testData.get(0).get(0), testData.get(0).get(1),testData.get(0).get(2),testData.get(0).get(3));
+
     }
 
 

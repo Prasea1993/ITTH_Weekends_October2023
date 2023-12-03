@@ -9,11 +9,17 @@ import org.testng.annotations.DataProvider;
 
         features = {"src/test/resources/featureFiles"},
         glue = {"stepDefinitions","CommonActions"},
-        tags = "@RegistrationTest"
+        plugin = {"pretty",
+
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+
+                "timeline:test-output-thread/"
+
+        },tags = "@RegistrationTestDataTable"
 
 
 )
-public class LoginTestRunner extends AbstractTestNGCucumberTests {
+public class LoginTestNGTestRunner extends AbstractTestNGCucumberTests {
 
 
     @DataProvider
