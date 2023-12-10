@@ -12,6 +12,9 @@ import java.util.Properties;
 public class CommonActions {
 
 
+    
+
+
 // open browser
 //close browser
 // in TestNG there are annotations called Before and After
