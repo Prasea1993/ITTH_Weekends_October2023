@@ -23,6 +23,9 @@ public class DriverManager {
     // lastly we made the init browser return type from void to WebDriver
 
 
+
+    // These changes done from chandrika feature branch
+
 public static ThreadLocal<WebDriver>   container=new ThreadLocal<WebDriver>();
 
 
