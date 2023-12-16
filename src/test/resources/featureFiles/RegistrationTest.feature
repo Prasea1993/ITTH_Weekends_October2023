@@ -8,5 +8,5 @@ Feature: To validate the patient registration
     Then user should be able to login to the app
     And user click on registration button on home screen
     And user clicks on create new button
-    And user enters "mehedi" and "hasan" and "Male" and "23" to create patient registration
+    And user enters "Chandrika" and "ITTH" and "Female" and "23" to create patient registration
     And clicks on startOPD button
