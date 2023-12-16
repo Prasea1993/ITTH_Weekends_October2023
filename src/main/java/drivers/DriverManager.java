@@ -75,14 +75,14 @@ public WebDriver initialiseBrowser(String browserType) throws MalformedURLExcept
 
                 capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
-                capabilities.setCapability("browserName", "Safari");
-                capabilities.setCapability("browserVersion", "17.0");
+                capabilities.setCapability("browserName", "Chrome");
+                capabilities.setCapability("browserVersion", "latest");
                 HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
-                browserstackOptions.put("os", "OS X");
-                browserstackOptions.put("osVersion", "Sonoma");
+                browserstackOptions.put("os", "Windows");
+                browserstackOptions.put("osVersion", "11");
                 capabilities.setCapability("bstack:options", browserstackOptions);
-                String username ="prashanthsamudra_9uc23D";
-                String accessKey = "LXtj4dZ84jzfXy9QKvY8";
+                String username ="mehedihassankhan_pzAI2j";
+                String accessKey = "H28crR5x8ZxoqxGLB2mU";
                 String BROWSERURL = "https://"+username+":"+accessKey+"@hub-cloud.browserstack.com/wd/hub";
                 container.set(new RemoteWebDriver(new URL(BROWSERURL), capabilities));
 
