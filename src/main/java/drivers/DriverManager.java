@@ -76,6 +76,7 @@ public WebDriver initialiseBrowser(String browserType) throws MalformedURLExcept
                 capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
 
+
                 capabilities.setCapability("browserName", "Chrome");
                 capabilities.setCapability("browserVersion", "latest");
                 HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
